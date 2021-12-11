@@ -13,11 +13,11 @@ class LukyController extends AbstractController
     public function index(): Response
     {
         return $this->render('luky/index.html.twig', [
-            'controller_name' => 'LukyController',
+            'x' => 'LukyController',
         ]);
     }
 
-    #[Route('/number/{max}', name: 'number')]
+    #[Route('/number/{max}', name:'number')]
     public function number(int $max): Response 
     {  
         $number = random_int(0,$max);
